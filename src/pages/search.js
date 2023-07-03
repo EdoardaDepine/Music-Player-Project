@@ -8,6 +8,14 @@ import Loading from "../components/loading";
 const minCharactersInputArtist = 2;
 
 class Search extends Component {
+  state = {
+    habilityButtonSearch: true,
+    nameArtist: "",
+    albums: null,
+    isLoading: false,
+    searchArtistName: "",
+  };
+
   render() {
     return (
       <div>
