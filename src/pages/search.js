@@ -34,6 +34,15 @@ class Search extends Component {
     }
   };
 
+  onClickButtonSearch = async () => {
+    this.setState({ isLoading: true });
+    const albunsAPI = await searchAlbumsAPI(`${this.state.nameArtist}`);
+    this.setState({ albums: albunsAPI });
+    this.setState({ isLoading: false });
+    this.setState({ searchArtistName: this.state.nameArtist });
+    this.setState({ nameArtist: "" });
+  };
+
   render() {
     return (
       <div>
