@@ -4,6 +4,11 @@ import Loading from "./loading";
 //CSS
 
 class MusicCard extends Component {
+  state = {
+    check: false,
+    isLoading: false,
+  };
+
   render() {
     const { trackName, previewUrl } = this.props;
     return (
