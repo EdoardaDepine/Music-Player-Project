@@ -1,0 +1,49 @@
+.userProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7em;
+  margin-bottom: 5em;
+  gap: 1em;
+}
+
+.imageUser {
+  height: 6em;
+  width: 6em;
+  border-radius: 10em;
+  margin-bottom: 1em;
+}
+
+.userNameProfile,
+.userDescriptionProfile,
+.userEmailProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding-left: 1em;
+  background-color: rgba(239, 243, 243, 0.466);
+  border-radius: 5px;
+  box-shadow: 1px 0px 2px 1px rgb(184, 183, 183);
+  width: 19em;
+}
+.nameTitle,
+.descriptionTitle,
+.emailTitle {
+  font-weight: bolder;
+  font-size: 1em;
+}
+
+.description {
+  text-overflow: ellipsis;
+  overflow: scroll;
+}
+
+.buttonEditProfile {
+  background-color: rgb(2, 2, 36);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 180px;
+  height: 27px;
+}

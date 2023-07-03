@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.containerCard {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  background-color: white;
+  gap: 2em;
+}

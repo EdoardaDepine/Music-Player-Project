@@ -1,0 +1,38 @@
+.containerProfileEdit {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.containerImageEdit,
+.containerNameEdit,
+.containerDescriptionEdit,
+.containerEmailEdit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  width: 25rem;
+}
+
+.imageEditInput,
+.nameEditInput,
+.descriptionEditInput,
+.emailEditInput {
+  width: 17rem;
+  height: 22px;
+  border-radius: 2px;
+  border: solid 1px;
+  border-color: gray;
+}
+
+.saveButton {
+  background-color: rgb(2, 2, 36);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 160px;
+  height: 27px;
+}

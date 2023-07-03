@@ -1,0 +1,97 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(137, 43, 226, 0.377);
+  box-shadow: 1px 1px 1px 1px rgb(137, 43, 226, 0.377);
+  height: 3em;
+  margin: 0 0;
+}
+
+.titleSite {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.4em;
+}
+
+.userName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 0.93em;
+  font-weight: lighter;
+  background-color: rgba(0, 0, 0, 0.233);
+  color: white;
+  border-radius: 20em;
+  height: 2em;
+  width: 9em;
+}
+
+.search,
+.profile,
+.name,
+.favorites {
+  color: white;
+  text-decoration: none;
+  font-style: none;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.linkToSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  background-color: rgb(221, 219, 219);
+  text-decoration: none;
+  color: black;
+  box-shadow: 1px 0px 1px 1px rgb(184, 183, 183);
+  height: 2.8em;
+  width: 20em;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.4em;
+}
+
+.linkToFavorites {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(2, 2, 36);
+  text-decoration: none;
+  color: black;
+  box-shadow: 1px 0px 1px 1px rgb(2, 2, 36);
+  height: 2.8em;
+  width: 20em;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.4em;
+}
+
+.linkToProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(57, 2, 71);
+  text-decoration: none;
+  color: black;
+  box-shadow: 1px 0px 1px 1px rgb(57, 2, 71);
+  height: 2.8em;
+  width: 20em;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.4em;
+}

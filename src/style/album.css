@@ -1,0 +1,7 @@
+.musicsList {
+  display: flex;
+  flex-direction: column;
+  padding: 10em;
+  justify-content: center;
+  align-items: center;
+}
