@@ -19,3 +19,15 @@ export const getUser = () =>
     }
     simulateRequest(user)(resolve);
   });
+
+export const createUser = (user) =>
+  new Promise((resolve) => {
+    const emptyUser = {
+      name: "",
+      email: "",
+      image: "",
+      description: "",
+    };
+    saveUser({ ...emptyUser, ...user });
+    simulateRequest(SUCCESS_STATUS)(resolve);
+  });
