@@ -22,3 +22,12 @@ export const getFavoriteSongs = () =>
     const favoriteSongs = readFavoriteSongs();
     simulateRequest(favoriteSongs)(resolve);
   });
+
+export const addSong = (song) =>
+  new Promise((resolve) => {
+    if (song) {
+      const favoriteSongs = readFavoriteSongs();
+      saveFavoriteSongs([...favoriteSongs, song]);
+    }
+    simulateRequest(SUCCESS_STATUS)(resolve);
+  });
