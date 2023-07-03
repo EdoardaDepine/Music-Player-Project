@@ -7,6 +7,13 @@ import Loading from "../components/loading.js";
 const minCharactersInputName = 3;
 
 class Login extends Component {
+  state = {
+    habilityButtonLogin: true,
+    nameLogin: "",
+    logged: false,
+    isLoading: false,
+  };
+
   render() {
     return this.state.isLoading ? (
       this.redirectToSearch()
@@ -34,3 +41,5 @@ class Login extends Component {
     );
   }
 }
+
+export default Login;
