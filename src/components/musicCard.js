@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { addSong, removeSong, getFavoriteSongs } from "../favoriteSongsAPI";
+import { addSong, removeSong, getFavoriteSongs } from "../favoritesSongsAPI";
 import Loading from "./loading";
 import "../style/musicCard.css";
 

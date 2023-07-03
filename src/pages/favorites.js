@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Header from "../components/header";
-import { getFavoriteSongs } from "../favoriteSongsAPI";
+import { getFavoriteSongs } from "../favoritesSongsAPI";
 import Loading from "../components/loading";
 import MusicCard from "../components/musicCard";
 import "../style/favorites.css";
