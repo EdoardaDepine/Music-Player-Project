@@ -3,7 +3,7 @@ import Header from "../components/header";
 import Loading from "../components/loading";
 import { getUser, updateUser } from "../userAPI";
 import { withRouter } from "react-router-dom";
-//CSS
+import "../style/profileEdit.css";
 
 const minCharactersInputs = 3;
 
