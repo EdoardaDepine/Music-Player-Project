@@ -16,6 +16,16 @@ class Search extends Component {
     searchArtistName: "",
   };
 
+  handleChange = ({ target }) => {
+    const { name, value } = target;
+    this.setState(
+      {
+        [name]: value,
+      },
+      () => this.verifyInputArtist()
+    );
+  };
+
   render() {
     return (
       <div>
