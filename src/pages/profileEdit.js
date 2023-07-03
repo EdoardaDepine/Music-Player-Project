@@ -58,6 +58,15 @@ class ProfileEdit extends Component {
     }
   };
 
+  updateProfile = async () => {
+    this.setState({ isLoading: true });
+    const { name, description, email, image } = this.state;
+    const user = { name, description, email, image };
+    await updateUser(user);
+    this.setState({ isLoading: false });
+    this.props.history.push("/profile");
+  };
+
   render() {
     return (
       <div>
