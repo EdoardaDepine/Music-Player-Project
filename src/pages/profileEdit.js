@@ -8,6 +8,16 @@ import { withRouter } from "react-router-dom";
 const minCharactersInputs = 3;
 
 class ProfileEdit extends Component {
+  state = {
+    isLoading: false,
+    name: "",
+    description: "",
+    email: "",
+    image: "",
+    habilityButton: true,
+    redirect: false,
+  };
+
   render() {
     return (
       <div>
