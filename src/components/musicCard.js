@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { addSong, removeSong, getFavoriteSongs } from "../favoriteSongsAPI";
 import Loading from "./loading";
-//CSS
+import "../style/musicCard.css";
 
 class MusicCard extends Component {
   state = {
