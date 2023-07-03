@@ -26,6 +26,14 @@ class Search extends Component {
     );
   };
 
+  verifyInputArtist = () => {
+    if (this.state.nameArtist.length >= minCharactersInputArtist) {
+      return this.setState({ habilityButtonSearch: false });
+    } else {
+      return this.setState({ habilityButtonSearch: true });
+    }
+  };
+
   render() {
     return (
       <div>
