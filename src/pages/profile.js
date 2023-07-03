@@ -11,6 +11,13 @@ class Profile extends Component {
     isLoading: false,
   };
 
+  componentDidMount = async () => {
+    this.setState({ isLoading: true });
+    const userLocalStorage = await getUser();
+    this.setState({ user: userLocalStorage });
+    this.setState({ isLoading: false });
+  };
+
   render() {
     const { user, isLoading } = this.state;
     return isLoading ? (
