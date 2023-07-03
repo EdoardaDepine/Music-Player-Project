@@ -25,6 +25,12 @@ class Login extends Component {
     );
   };
 
+  onClickButtonLogin = async () => {
+    this.setState({ isLoading: true });
+    await createUser({ name: this.state.nameLogin });
+    this.setState({ logged: true });
+  };
+
   render() {
     return this.state.isLoading ? (
       this.redirectToSearch()
