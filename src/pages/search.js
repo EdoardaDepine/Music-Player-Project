@@ -43,6 +43,41 @@ class Search extends Component {
     this.setState({ nameArtist: "" });
   };
 
+  albumsList = () => {
+    const { albums } = this.state;
+    if (albums === null)
+      return (
+        <p className='searchResults'>Pesquise para encontrar seus álbuns!</p>
+      );
+    if (albums.length === 0)
+      return <p className='searchResults'>Nenhum álbum foi encontrado!</p>;
+
+    return (
+      <div>
+        <p className='searchResults'>
+          Resultado de álbuns de: {this.state.searchArtistName}
+        </p>
+        <div className='albumList'>
+          {albums.map((album) => (
+            <div key={album.collectionId}>
+              <div className='albumCard'>
+                <img
+                  className='imageAlbum'
+                  src={album.artworkUrl100}
+                  alt={album.collectionName}
+                ></img>
+                <Link className='link' to={`/album/${album.collectionId}`}>
+                  <p className='nameAlbum'>{album.collectionName}</p>
+                </Link>
+                <p className='artistNameAlbum'>{album.artistName}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   render() {
     return (
       <div>
