@@ -31,3 +31,9 @@ export const createUser = (user) =>
     saveUser({ ...emptyUser, ...user });
     simulateRequest(SUCCESS_STATUS)(resolve);
   });
+
+export const updateUser = (updatedUser) =>
+  new Promise((resolve) => {
+    saveUser({ ...updatedUser });
+    simulateRequest(SUCCESS_STATUS)(resolve);
+  });
