@@ -31,6 +31,14 @@ class Login extends Component {
     this.setState({ logged: true });
   };
 
+  verifyInputNameLogin = () => {
+    if (this.state.nameLogin.length >= minCharactersInputName) {
+      return this.setState({ habilityButtonLogin: false });
+    } else {
+      return this.setState({ habilityButtonLogin: true });
+    }
+  };
+
   render() {
     return this.state.isLoading ? (
       this.redirectToSearch()
