@@ -22,6 +22,20 @@ class MusicCard extends Component {
     this.setState({ isLoading: false });
   };
 
+  handleChange = async ({ target }) => {
+    this.setState({ check: target.checked });
+    const { music } = this.props;
+    this.setState({ isLoading: true });
+
+    if (!this.state.check) {
+      await addSong(music);
+    } else {
+      await removeSong(music);
+    }
+
+    this.setState({ isLoading: false });
+  };
+
   render() {
     const { trackName, previewUrl } = this.props;
     return (
