@@ -9,6 +9,19 @@ class MusicCard extends Component {
     isLoading: false,
   };
 
+  componentDidMount = async () => {
+    this.setState({ isLoading: true });
+
+    const { trackId } = this.props;
+    const allMusics = await getFavoriteSongs();
+
+    if (allMusics.some((music) => music.trackId === trackId)) {
+      this.setState({ check: true });
+    }
+
+    this.setState({ isLoading: false });
+  };
+
   render() {
     const { trackName, previewUrl } = this.props;
     return (
