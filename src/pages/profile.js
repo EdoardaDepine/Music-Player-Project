@@ -3,7 +3,7 @@ import Header from "../components/header";
 import { getUser } from "../userAPI";
 import { Link } from "react-router-dom";
 import Loading from "../components/loading";
-//CSS
+import "../style/profile.css";
 
 class Profile extends Component {
   state = {
