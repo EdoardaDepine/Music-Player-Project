@@ -3,7 +3,7 @@ import Header from "../components/header";
 import Loading from "../components/loading";
 import getMusics from "../musicsAPI";
 import MusicCard from "../components/musicCard.js";
-//CSS
+import "../style/album.css";
 
 class Album extends Component {
   state = {
