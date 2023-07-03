@@ -39,6 +39,11 @@ class Login extends Component {
     }
   };
 
+  redirectToSearch = () => {
+    if (this.state.logged) return <Redirect to='/search' />;
+    return <Loading />;
+  };
+
   render() {
     return this.state.isLoading ? (
       this.redirectToSearch()
