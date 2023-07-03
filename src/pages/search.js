@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "../components/header";
 import searchAlbumsAPI from "../searchAlbumsAPI";
 import Loading from "../components/loading";
-//CSS
+import "../style/search.css";
 
 const minCharactersInputArtist = 2;
 
