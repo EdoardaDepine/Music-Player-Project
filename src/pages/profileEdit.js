@@ -44,6 +44,20 @@ class ProfileEdit extends Component {
     );
   };
 
+  verifyInputs = () => {
+    const { name, image, description, email } = this.state;
+    if (
+      name.length >= minCharactersInputs &&
+      image.length >= minCharactersInputs &&
+      description.length >= minCharactersInputs &&
+      email.length >= minCharactersInputs
+    ) {
+      this.setState({ habilityButton: false });
+    } else {
+      this.setState({ habilityButton: true });
+    }
+  };
+
   render() {
     return (
       <div>
