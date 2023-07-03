@@ -11,6 +11,12 @@ class Favorites extends Component {
     musics: [],
   };
 
+  async componentDidMount() {
+    const favoritesMusics = await getFavoriteSongs();
+    this.setState({ musics: favoritesMusics });
+    this.setState({ isLoading: false });
+  }
+
   render() {
     return (
       <div className='pageAlbum'>
