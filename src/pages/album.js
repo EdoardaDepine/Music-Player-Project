@@ -6,6 +6,11 @@ import MusicCard from "../components/musicCard.js";
 //CSS
 
 class Album extends Component {
+  state = {
+    isLoading: true,
+    musics: [],
+  };
+
   render() {
     return (
       <div>
