@@ -6,6 +6,11 @@ import MusicCard from "../components/musicCard";
 //CSS
 
 class Favorites extends Component {
+  state = {
+    isLoading: true,
+    musics: [],
+  };
+
   render() {
     return (
       <div className='pageAlbum'>
