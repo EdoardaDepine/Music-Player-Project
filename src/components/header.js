@@ -2,7 +2,7 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 import Loading from "../components/loading.js";
 import { getUser } from "../userAPI";
-//CSS
+import "../style/header.css";
 
 class Header extends Component {
   state = {
