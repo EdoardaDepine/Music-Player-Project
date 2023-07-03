@@ -2,7 +2,7 @@ import { Component } from "react";
 import { createUser } from "../userAPI";
 import { Redirect } from "react-router-dom";
 import Loading from "../components/loading.js";
-//CSS
+import "../style/login.css";
 
 const minCharactersInputName = 3;
 
