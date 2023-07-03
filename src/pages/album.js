@@ -11,6 +11,17 @@ class Album extends Component {
     musics: [],
   };
 
+  async componentDidMount() {
+    const {
+      match: {
+        params: { id },
+      },
+    } = this.props;
+    const musicsApi = await getMusics(id);
+    this.setState({ musics: musicsApi });
+    this.setState({ isLoading: false });
+  }
+
   render() {
     return (
       <div>
