@@ -14,6 +14,17 @@ class Login extends Component {
     isLoading: false,
   };
 
+  handleChange = ({ target }) => {
+    const { name, value } = target;
+
+    this.setState(
+      {
+        [name]: value,
+      },
+      () => this.verifyInputNameLogin()
+    );
+  };
+
   render() {
     return this.state.isLoading ? (
       this.redirectToSearch()
