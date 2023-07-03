@@ -6,6 +6,12 @@ class Header extends Component {
   state = {
     user: "",
   };
+
+  async componentDidMount() {
+    const userLocalStorage = await getUser();
+    this.setState({ user: userLocalStorage });
+  }
+
   render() {
     return (
       <header className='header'>
