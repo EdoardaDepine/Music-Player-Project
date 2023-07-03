@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { getUser } from "../userAPI";
 
 class Header extends Component {
+  state = {
+    user: "",
+  };
   render() {
     return (
       <header className='header'>
