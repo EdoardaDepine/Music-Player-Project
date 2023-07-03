@@ -18,6 +18,32 @@ class ProfileEdit extends Component {
     redirect: false,
   };
 
+  componentDidMount = async () => {
+    this.setState({ isLoading: true });
+    const user = await getUser();
+    this.setState(
+      {
+        name: user.name,
+        description: user.description,
+        email: user.email,
+        image: user.image,
+      },
+      this.verifyInputs
+    );
+
+    this.setState({ isLoading: false });
+  };
+
+  handleChange = ({ target }) => {
+    const { name, value } = target;
+    this.setState(
+      {
+        [name]: value,
+      },
+      () => this.verifyInputs()
+    );
+  };
+
   render() {
     return (
       <div>
